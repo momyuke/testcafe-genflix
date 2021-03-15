@@ -27,6 +27,9 @@ const LogGoogle = async t => {
     await t.navigateTo(`https://genflix.co.id/login`)
     .click(xpathSelector(`//*[@id="root"]/div[2]/button[4]`))
     .click(xpathSelector(`//*[@id="view_container"]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div/div/ul/li[1]/div`))
+
+    await t
+    .expect(xpathSelector(`//*[@id="root"]/div[1]/ul[2]/li[2]/img`)).ok()
 }
 
 const LogFacebook = async t => {

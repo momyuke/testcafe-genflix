@@ -1,7 +1,6 @@
-import { Selector } from 'testcafe';
-import xpathSelector from './xpath-selector';
-import LogPositive from './Testcase/Log-Positive';
-import WatchPositive from './Testcase/Watch-Positive';
+import LogPositive from './Test/Log-Positive';
+import WatchPositive from './Test/Watch-Positive';
+import LogNegative from './Test/Log-Negative';
 
 
 fixture `Getting Started`
@@ -10,6 +9,18 @@ fixture `Getting Started`
     test(`[Genflix] Test Login and Logout with Email`, async t => {
         await LogPositive.LogEmail(t);
     });
+
+    test(`[Genflix] Negative Test Login with Email`, async t => {
+        await LogNegative.LogEmailNegative(t)
+    });
+
+    test (`[Genflix] Negative Test Login with Google`, async t => {
+        await LogNegative.LogGoogleNegative(t)
+    })
+
+    test (`[Genflix] Negative Test Login with Facebook `, async t => {
+        await LogNegative.LogFacebookNegative(t)
+    })
 
     test(`[Genflix] Test Login and Logout with Google`, async t => {
         await LogPositive.LogGoogle(t)
@@ -20,9 +31,12 @@ fixture `Getting Started`
         await LogPositive.LogFacebook(t)
     });
 
+
     test(`[Genflix] Test Watching Movie`, async t => {
         await WatchPositive(t);
     });
+
+
 
     
 

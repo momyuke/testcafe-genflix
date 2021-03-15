@@ -13,9 +13,9 @@ const WatchMovie = async t => {
     .maximizeWindow()
     .click('body', {offsetX: 636, offsetY :241})
     .click(xpathSelector(`//*[@id="root"]/div[2]/div[1]/div[1]/div[2]/button`))
-    .click('body', {offsetX : 42, offsetY : 582})
-    .click('body', {offsetX: 192, offsetY :610})
-    .wait(5000)
+    .click('.shaka-controls-container', {offsetX : 42, offsetY : 582})
+    .click('.shaka-controls-container', {offsetX: 192, offsetY :610})
+    .wait(10000)
 }
 
 export default WatchMovie;
