@@ -13,4 +13,4 @@ On the terminal please type this `npm install -g testcafe-reporter-html` and ent
 ## Run The Code 
 
 On the terminal (Make sure the directory has been directed to the file of code) 
-please type this `testcafe chrome --reporter html:genflix-web-testing.html` 
+please type this `testcafe chrome  --reporter html:genflix-web-testing.html --skip-js-errors allTest.js ` 
